@@ -4,11 +4,15 @@
 
 # Tailwind CSS skill
 
-Reusable guidance for coding agents authoring, reviewing, and debugging UI in existing **Tailwind CSS v4.1+** projects.
+A community-driven Tailwind CSS skill for AI agents.
 
-The [entry skill](skills/tailwindcss/SKILL.md) stays concise and loads [focused references](skills/tailwindcss/references/) for utility authoring, themes, source detection, responsive/state behavior, composition, and troubleshooting. It follows the project's existing components and design vocabulary.
+## Introduction
 
-## Install
+This project brings Tailwind CSS best practices to AI coding agents, helping them write, review, and fix UI while following your project's existing styles and components. It draws on Tailwind's documentation and ideas from other agent skills.
+
+The skill works with **Tailwind CSS v4.1+ within v4** and is framework agnostic, so you can use it in existing React, Vue, Svelte, Astro, and other projects.
+
+## Installation
 
 Run this from the project where you want to use the skill:
 
@@ -16,50 +20,34 @@ Run this from the project where you want to use the skill:
 npx skills add sopo/tailwindcss-skills --skill tailwindcss
 ```
 
-Select your coding agent when prompted. To install globally, add `--global`. For a non-interactive Codex installation in the current project:
+Select your coding agent when prompted. Add `--global` if you want the skill available across projects.
 
-```sh
-npx skills add sopo/tailwindcss-skills --skill tailwindcss --agent codex --yes
-```
+Your agent can discover the skill automatically, or you can ask it to use the `tailwindcss` skill explicitly. You don't need to install this repository's development dependencies to use it.
 
-Installation uses the [skills CLI](https://skills.sh/docs) and requires no evaluation dependencies.
+## Evaluation
 
-For manual installation, copy the entire [skills/tailwindcss/](skills/tailwindcss/) directory into your agent's supported skills location. For a project using `.agents/skills/`, the result is:
+We believe the best evaluation is human judgment. Try the skill in a real project and [file an issue](https://github.com/sopo/tailwindcss-skills/issues) with anything that could be improved. Examples of what you asked for and what the agent produced are especially helpful.
 
-```text
-.agents/skills/tailwindcss/
-  SKILL.md
-  references/
-```
+We also use [promptfoo](https://www.promptfoo.dev/) to compare agents working on the same tasks with and without the skill. These evaluations check whether the resulting UI builds and behaves as expected.
 
-Install only the skill and references; the evaluation dependencies and research notes are development material. Automatic discovery is enabled by the skill description. You can also explicitly request the `tailwindcss` skill using your agent's invocation syntax.
+See the [evaluation guide](evals/README.md) to run the checks, or read the [measured results](evals/RESULTS.md).
 
-## Scope and constraints
+## Development
 
-- Tailwind CSS **v4.1 or later within v4** is the supported baseline. Later-feature requirements are stated beside the relevant reference guidance.
-- Browser support follows [Tailwind v4's documented baseline](https://tailwindcss.com/docs/compatibility): Safari 16.4+, Chrome 111+, and Firefox 128+. Individual modern CSS features can require newer browsers.
-- Intended for **existing projects**. Fresh Tailwind installation, v3 migration, and dependency upgrades are outside this release's workflow.
-- Framework-neutral guidance supports React, Vue, Svelte, Astro, and server-rendered templates. Framework-specific examples explain the processing boundary; this is not a component library.
-- Compatibility is an installation constraint. The skill does not repeatedly diagnose older/unknown versions or ask users to reconfirm support.
-- Correctness rules are firm; maintainability choices are defaults. Existing conventions take precedence unless they cause a concrete problem.
-- shadcn-inspired shorthand, component reuse, and token ownership stay conditional on equivalent behavior and the actual component API. The skill does not require shadcn, `cn()`, CVA, or a semantic token vocabulary.
+Contributions are welcome, whether you're improving guidance, adding examples, or reporting a problem.
 
-## Development and evaluation
-
-The development toolchain requires **Node.js 22.22+** and pnpm. Runtime dependencies are for evaluations only; installing the skill does not require them.
+To work on the repository, use **Node.js 22.22+** and **pnpm**, then install dependencies and run the checks:
 
 ```sh
 pnpm install --frozen-lockfile
 pnpm exec playwright install chromium
 pnpm check
 pnpm test:recipes
-pnpm eval:prepare
 pnpm test
-pnpm eval:smoke
-pnpm eval
-pnpm eval:report
 ```
 
-See the [evaluation guide](evals/README.md) for model configuration, authentication, fixtures, grading, and result interpretation, and the [measured results](evals/RESULTS.md) for the initial comparison. Agent evaluations use your configured Codex access and consume its usage allowance.
+The skill lives in [skills/tailwindcss/](skills/tailwindcss/). Start with [SKILL.md](skills/tailwindcss/SKILL.md) for the main guidance and [references/](skills/tailwindcss/references/) for individual topics.
 
-The [research and accepted proposal](research/tailwindcss-v4-best-practices.md) records primary sources and the decisions behind this package.
+For agent evaluation setup and commands, follow the [evaluation guide](evals/README.md). Agent evaluations use your configured Codex access and consume its usage allowance.
+
+The [research notes](research/tailwindcss-v4-best-practices.md) explain the sources and decisions behind the skill.
