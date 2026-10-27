@@ -5,15 +5,15 @@ import { createRequire } from 'node:module';
 import { mkdtemp, readFile, writeFile, mkdir, rm } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { tmpdir } from 'node:os';
-import { root, evalRoot } from './prepare.mjs';
+import { skillRoot, evalRoot } from './prepare.mjs';
 
 const require = createRequire(import.meta.url);
 const blocks = (text, lang) => [...text.matchAll(new RegExp('```' + lang + '\\n([\\s\\S]*?)```', 'g'))].map((m) => m[1]);
-const utilities = await readFile(join(root, 'references/utilities.md'), 'utf8');
-const themes = await readFile(join(root, 'references/themes.md'), 'utf8');
-const layout = await readFile(join(root, 'references/layout-and-states.md'), 'utf8');
-const composition = await readFile(join(root, 'references/composition.md'), 'utf8');
-const sourceDoc = await readFile(join(root, 'references/source-detection.md'), 'utf8');
+const utilities = await readFile(join(skillRoot, 'references/utilities.md'), 'utf8');
+const themes = await readFile(join(skillRoot, 'references/themes.md'), 'utf8');
+const layout = await readFile(join(skillRoot, 'references/layout-and-states.md'), 'utf8');
+const composition = await readFile(join(skillRoot, 'references/composition.md'), 'utf8');
+const sourceDoc = await readFile(join(skillRoot, 'references/source-detection.md'), 'utf8');
 const semantic = blocks(themes, 'css').find((b) => b.includes('@import'));
 const container = blocks(layout, 'html').find((b) => b.includes('@container/card'));
 const html = blocks(utilities, 'html').join('\n') + container + `

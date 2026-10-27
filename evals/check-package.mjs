@@ -3,9 +3,10 @@ import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const entry = await readFile(join(root, 'SKILL.md'), 'utf8');
+const skillPath = 'skills/tailwindcss';
+const entry = await readFile(join(root, skillPath, 'SKILL.md'), 'utf8');
 if (!/^---\nname: tailwindcss\ndescription: .+\n---/m.test(entry)) throw new Error('Skill needs its agreed name and a meaningful frontmatter description');
-const files = ['SKILL.md', 'README.md', ...(await readdir(join(root, 'references'))).map((name) => 'references/' + name)];
+const files = ['README.md', skillPath + '/SKILL.md', ...(await readdir(join(root, skillPath, 'references'))).map((name) => skillPath + '/references/' + name)];
 for (const name of files) {
   const text = await readFile(join(root, name), 'utf8');
   if ((text.match(/^```/gm) || []).length % 2) throw new Error(`Unbalanced fences: ${name}`);

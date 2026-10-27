@@ -7,6 +7,7 @@ import { homedir } from 'node:os';
 import { fixtureFiles } from './cases.mjs';
 
 export const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+export const skillRoot = join(root, 'skills', 'tailwindcss');
 export const evalRoot = join(root, '.eval');
 
 export async function prepare() {
@@ -38,8 +39,8 @@ export async function prepare() {
     if (condition === 'skill') {
       const skill = join(dir, '.agents', 'skills', 'tailwindcss');
       await mkdir(skill, { recursive: true });
-      await cp(join(root, 'SKILL.md'), join(skill, 'SKILL.md'));
-      await cp(join(root, 'references'), join(skill, 'references'), { recursive: true });
+      await cp(join(skillRoot, 'SKILL.md'), join(skill, 'SKILL.md'));
+      await cp(join(skillRoot, 'references'), join(skill, 'references'), { recursive: true });
     }
   }
   // An isolated Codex home avoids inheriting personal Codex instructions/plugins.

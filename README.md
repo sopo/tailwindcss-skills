@@ -2,11 +2,25 @@
 
 Reusable guidance for coding agents authoring, reviewing, and debugging UI in existing **Tailwind CSS v4.1+** projects.
 
-The [entry skill](SKILL.md) stays concise and loads [focused references](references/) for utility authoring, themes, source detection, responsive/state behavior, composition, and troubleshooting. It follows the project's existing components and design vocabulary.
+The [entry skill](skills/tailwindcss/SKILL.md) stays concise and loads [focused references](skills/tailwindcss/references/) for utility authoring, themes, source detection, responsive/state behavior, composition, and troubleshooting. It follows the project's existing components and design vocabulary.
 
 ## Install
 
-Copy [SKILL.md](SKILL.md) and the entire [references/](references/) directory together into a skill directory named `tailwindcss` in your agent's supported skills location. For a project using `.agents/skills/`, the result is:
+Run this from the project where you want to use the skill:
+
+```sh
+npx skills add sopo/tailwindcss-skills --skill tailwindcss
+```
+
+Select your coding agent when prompted. To install globally, add `--global`. For a non-interactive Codex installation in the current project:
+
+```sh
+npx skills add sopo/tailwindcss-skills --skill tailwindcss --agent codex --yes
+```
+
+Installation uses the [skills CLI](https://skills.sh/docs) and requires no evaluation dependencies.
+
+For manual installation, copy the entire [skills/tailwindcss/](skills/tailwindcss/) directory into your agent's supported skills location. For a project using `.agents/skills/`, the result is:
 
 ```text
 .agents/skills/tailwindcss/
