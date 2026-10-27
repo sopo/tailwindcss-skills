@@ -1,0 +1,5 @@
+Generated with the built-in image_gen tool; transparent_background: true.
+Edit target: assets/tailwindcss-skills-logo.png
+
+Use case: precise-object-edit / logo-brand.
+Edit the supplied Tailwind CSS Skills logo. Keep the two cyan Tailwind waves, their shape, color, placement, and overall simple composition unchanged. Refine only the upper-right sparkle: make the main four-point star about 15% larger, recolor it warm flat gold (#F5B942), and add one tiny matching gold four-point companion sparkle just above and to its left, to give a slightly stronger AI-skills cue. Maintain clear separation from the waves and ample negative space. The result should remain extremely simple, clean, flat, crisp, vector-like and readable as a small icon. Preserve the transparent background. No text, no borders, no badge, no gradients, no metallic texture, no glow, no shadows, no additional decoration. Clean edges without stray pixels.

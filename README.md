@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/tailwindcss-skills-logo-v2.png" alt="Tailwind CSS Skills logo with cyan waves and gold AI sparkles" width="200" />
+</p>
+
 # Tailwind CSS skill
 
 Reusable guidance for coding agents authoring, reviewing, and debugging UI in existing **Tailwind CSS v4.1+** projects.

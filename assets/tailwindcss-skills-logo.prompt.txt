@@ -1,0 +1,9 @@
+Generated with the built-in image_gen tool; transparent_background: true.
+
+Use case: logo-brand
+Asset type: simple project logo for 'Tailwind CSS Skills', a collection of reusable coding-agent skills for Tailwind CSS.
+Primary request: The recognizable Tailwind CSS two flowing wind/wave shapes, with one small four-point sparkle at the upper right as a subtle hint of agent skills and capability. Keep the familiar Tailwind wave silhouette dominant; the sparkle is a small secondary accent, cleanly separated with breathing room.
+Style/medium: extremely minimal, crisp flat vector-like logo; solid cyan #38BDF8 for both waves and sparkle, smooth precise curves.
+Composition/framing: one centered standalone symbol on a square canvas with generous transparent padding; visually balanced and readable at small icon sizes.
+Scene/backdrop: genuinely transparent background.
+Constraints: only the two Tailwind wave shapes and one small four-point sparkle. No text, no letters, no border, no enclosing badge, no gradients, no shadows, no glow, no 3D, no texture, no mockup, no additional icons or decoration.
