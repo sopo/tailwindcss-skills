@@ -1,0 +1,4 @@
+node_modules/
+.eval/
+.promptfoo/
+.DS_Store
