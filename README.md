@@ -10,7 +10,7 @@ A community-driven Tailwind CSS skill for AI agents.
 
 ## Introduction
 
-This project brings Tailwind CSS best practices to AI coding agents, helping them write, review, and fix UI while following your project's existing styles and components. It draws on Tailwind's documentation and ideas from other agent skills.
+AI models have learned from plenty of Tailwind CSS code and are already good at writing it. A little nudge in the right direction can make them better. That's what this skill is about: helping agents follow Tailwind CSS best practices and work with your project's existing styles and components.
 
 The skill works with **Tailwind CSS v4.1+** and is framework agnostic, so you can use it in existing React, Vue, Svelte, Astro, and other projects.
 
@@ -21,10 +21,6 @@ Run this from the project where you want to use the skill:
 ```sh
 npx skills add sopo/tailwindcss-skills --skill tailwindcss
 ```
-
-Select your coding agent when prompted. Add `--global` if you want the skill available across projects.
-
-Your agent can discover the skill automatically, or you can ask it to use the `tailwindcss` skill explicitly. You don't need to install this repository's development dependencies to use it.
 
 ## Evaluation
 
