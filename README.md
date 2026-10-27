@@ -12,7 +12,7 @@ A community-driven Tailwind CSS skill for AI agents.
 
 This project brings Tailwind CSS best practices to AI coding agents, helping them write, review, and fix UI while following your project's existing styles and components. It draws on Tailwind's documentation and ideas from other agent skills.
 
-The skill works with **Tailwind CSS v4.1+ within v4** and is framework agnostic, so you can use it in existing React, Vue, Svelte, Astro, and other projects.
+The skill works with **Tailwind CSS v4.1+** and is framework agnostic, so you can use it in existing React, Vue, Svelte, Astro, and other projects.
 
 ## Installation
 
