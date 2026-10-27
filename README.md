@@ -4,6 +4,8 @@
 
 # Tailwind CSS skill
 
+[![skills.sh installs](https://skills.sh/b/sopo/tailwindcss-skills)](https://skills.sh/sopo/tailwindcss-skills)
+
 A community-driven Tailwind CSS skill for AI agents.
 
 ## Introduction
